@@ -6,7 +6,7 @@ products.forEach(product => {
 
     const image = product.querySelector('img');
     const imageNumber = Math.floor(Math.random() * 10) + 1;
-    image.src = `https://source.unsplash.com/featured/?mclaren&sig=${imageNumber}`;
+    image.src = `https://source.unsplash.com/featured/?joebiden&sig=${imageNumber}`;
     image.width = 200;
     image.height = 300;
 });
