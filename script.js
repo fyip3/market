@@ -26,7 +26,10 @@ addToCartButtons.forEach(button => {
 
 function addItemToCart(title, price) {
     // Add item to cart (implementation depends on the server-side code and database)
-    console.log(`Added ${title} to cart for $${price}`);
+    const cartItems = document.querySelector('#cart-items');
+    const cartItem = document.createElement('li');
+    cartItem.textContent = `${title} - $${price}`;
+    cartItems.appendChild(cartItem);
 }
 
 const checkoutForm = document.querySelector('.checkout form');
@@ -43,9 +46,6 @@ checkoutForm.addEventListener('submit', event => {
 
 function placeOrder(name, email, address, paymentMethod) {
     // Place order (implementation depends on the server-side code and database)
-    console.log('Order placed:');
-    console.log(`Name: ${name}`);
-    console.log(`Email: ${email}`);
-    console.log(`Address: ${address}`);
-    console.log(`Payment Method: ${paymentMethod}`);
+    const orderInfo = document.querySelector('#order-info');
+    orderInfo.innerHTML = `<p>Name: ${name}</p><p>Email: ${email}</p><p>Address: ${address}</p><p>Payment Method: ${paymentMethod}</p>`;
 }
