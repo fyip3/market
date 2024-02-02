@@ -1,1 +1,1 @@
-Stereotype for a marketplace website
+Stereotype for a marketplace website named "Nozama"
